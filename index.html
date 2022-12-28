@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>MMS</title>
+</head>
+
+<body>
+    <div class="main">
+        <section class="head">
+            <h2>MMS</h2>
+            <p>Market-Management-System</p>
+        </section>
+        <section class="inputs">
+            <input type='text' id='title' placeholder="title" />
+            <div class="price">
+                <input onkeyup="getTotal()" type='number' id="price" placeholder="price" />
+                <input onkeyup="getTotal()" type='number' id="taxes" placeholder="taxes" />
+                <input onkeyup="getTotal()" type='number' id="ads" placeholder="ads" />
+                <input onkeyup="getTotal()" type='number' id="discount" placeholder="discount" />
+                <small id="total"></small>
+            </div>
+            <input type='number' id="count" placeholder="count" />
+            <input type='text' id="category" placeholder="category" />
+            <button id="create">Create</button>
+        </section>
+        <section class="outputs">
+            <div class="SearchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="Search" placeholder="Search by title (default)">
+                <div class="btnSearch">
+                    <button onclick="getSearchMode(this.id)" id="SearchTitle">Search By Title</button>
+                    <button onclick="getSearchMode(this.id)" id="SearchCategory">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>ads</th>
+                    <th>dicount</th>
+                    <th>Total</th>
+                    <th>count</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Sell 1 item</th>
+                    <th>Delete item</th>
+                    <th>Sold</th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
